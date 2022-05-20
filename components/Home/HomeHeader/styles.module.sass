@@ -1,0 +1,54 @@
+@import '~assets/styles/variables.sass'
+
+.home-header
+  background: #341F47
+  color: #fff
+  text-align: center
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  padding-bottom: 140px
+  padding-top: 70px
+
+  @media (max-width: $tablet)
+    padding: 50px 0
+    height: auto
+
+  &__title
+    font: 3.6rem/6rem $peb
+    margin-top: 0
+    margin-bottom: 15px
+    width: 50%
+
+    @media (max-width: $standart)
+      width: 75%
+
+    @media (max-width: $tablet)
+      width: 85%
+    
+    @media (max-width: $extra-small)
+      font: 3rem/3.6rem $peb
+
+  &__subtitle
+    font: 2rem/3rem $pl
+    width: 40%
+    @media (max-width: $standart)
+      width: 75%
+            
+    @media (max-width: $tablet)
+      width: 95%
+
+    @media (max-width: $extra-small)
+      font: 1.8rem/2.4rem $pm
+
+  &__button
+    margin: 30px auto 0 auto
+    font-size: 1.8rem
+    width: 200px
+
+    @media (max-width: $standart)
+      margin-top: 20px
+
+    @media (max-width: $extra-small)
+      margin-top: 45px

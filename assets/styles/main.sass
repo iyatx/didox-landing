@@ -1,0 +1,248 @@
+@import 'variables.sass'
+
+*
+	box-sizing: border-box
+	outline: none
+
+img
+	max-width: 100%
+	height: auto
+
+label
+	cursor: pointer
+
+html, body
+	margin: 0
+	width: 100%
+	// height: 100%
+	font-size: 10px
+	// transition: .2s all ease-in-out
+	padding: 0 !important
+	@media (max-width: $standart)
+		font-size: 9px
+		transition: .2s all ease-in-out
+
+body
+	display: flex
+	flex-direction: column
+	width: 100% !important
+
+.body
+	&--without-act
+		.be__act
+			display: none
+
+.root--small
+	font-size: 9px
+	@media (max-width: $hd)
+		font-size: 8px
+	@media (max-width: $standart)
+		font-size: 7px
+	.container
+		padding: 0 22px
+
+.wrapper
+	flex: 1 1 auto
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	position: relative
+	transition: .2s all ease-in-out
+	&--hide
+		display: none
+
+	.react-datepicker
+		border: none
+		box-shadow: 0px 0px 22px rgba(60, 72, 104, 0.21)
+		border-radius: 11px
+		background: $white
+
+		&-wrapper
+			position: relative
+			display: block
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				right: 12px
+				top: 50%
+				transform: translateY(-50%)
+				width: 24px
+				height: 24px
+				background: url('~assets/images/icons/calendar.svg') center center no-repeat
+				background-size: contain
+
+		&__header
+			background: $white
+			border-radius: 11px 11px 0 0
+			border: none
+			padding: 25px 16px 0 16px
+
+		&__navigation
+			cursor: pointer
+			position: absolute
+			top: 30px
+			padding: 0
+			z-index: 1
+			height: 10px
+			width: 10px
+			text-indent: -999em
+			width: 6px
+			height: 13px
+
+			&--next
+				right: 29px
+				border: none
+				background: url('~assets/images/icons/arrow-right.svg') center center no-repeat
+				background-size: 6px 13px
+
+			&--previous
+				left: 29px
+				border: none
+				background: url('~assets/images/icons/arrow-left.svg') center center no-repeat
+				background-size: 6px 13px
+
+		&__day--weekend
+			opacity: 1
+
+		&__triangle
+			border: none
+			position: relative
+			&::before
+				border-color: $white !important
+
+		&__current-month
+			font: 1.4rem/1.8rem $psb
+			color: $dark-gray
+			text-transform: uppercase
+			margin-bottom: 18px
+
+		&__day--keyboard-selected
+			background: $yellow
+			border-radius: 7.5px
+
+			&:hover
+				border-radius: 7.5px
+				background: $yellow
+
+		&__month
+			padding: 0 16px 25px 16px
+			margin: 0
+
+		&__day-names
+			border: none
+
+		&__week
+			width: 100%
+
+		&__day
+			font: 1.4rem/1.8rem $pm
+			color: $dark-gray
+			padding: 6px 10px
+			width: 14.28%
+			margin: 0
+
+		&__day--selected
+			background: $yellow
+			border-radius: 7.5px
+
+			&:hover
+				background: $yellow
+				border-radius: 7.5px
+
+		&__day--outside-month
+			opacity: 0
+			pointer-events: none
+
+		&__day-name
+			font: 1.4rem/1.8rem $pr
+			color: $shade-gray
+			text-transform: uppercase
+			padding: 6px 14px
+			width: 14.28%
+			margin: 0
+
+	.react-datepicker-popper[data-placement^="bottom"]
+		margin-top: 20px
+		z-index: 100
+
+.main
+	flex: 1 0 auto
+	display: flex
+	flex-direction: column
+
+.text
+	font: 1.9rem/150% $pl
+	color: $dark-gray
+
+.headline
+	font: 3.1rem/3.7rem $pb
+	color: $dark-gray
+
+.clear
+	clear: both
+
+a
+	text-decoration: none
+
+ul
+	padding: 0
+	margin: 0
+
+.container
+	padding-left: 34px
+	padding-right: 34px
+	margin-left: auto
+	margin-right: auto
+	@media (max-width: $mobile)
+		padding-left: 15px
+		padding-right: 15px
+
+.auth-title
+	font: 3.2rem $psb
+	color: $dark-gray
+	text-align: center
+
+.tar
+	text-align: right
+
+.tac
+	text-align: center
+
+.bold
+	font-family: $pb
+
+.print
+	margin: 0 auto
+	.be__act
+		@media print
+			page-break-inside: avoid
+
+.ck.ck-editor
+	width: 100%
+
+.ck.ck-content
+	height: 400px
+	font-size: 12px
+	border: solid 1px $gray
+	border-top: none
+	.table
+		width: 100%
+	h1, h2, h3
+		font-family: $b
+
+.alert__link
+	@include link
+
+.didox-new-alert
+	margin: -2.5rem 0 -6.5rem 0
+	@media (max-width: $hd)
+		img
+			max-width: 700px
+		p
+			margin: 1rem 0
+
+	@media (max-width: $standart)
+		img
+			max-width: 650px
+			margin: 1rem 0

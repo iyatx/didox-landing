@@ -1,0 +1,73 @@
+@import '~assets/styles/variables.sass'
+
+.header
+  z-index: 101
+  position: relative
+
+.general-header
+  background: $dark-purple
+  padding: 25px 0
+  &__container
+    padding: 0 20px
+    margin: 0 auto
+    // max-width: 1300px
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__logo
+    height: 33px
+    cursor: pointer
+    margin-right: 50px
+    min-width: 80px
+
+    @media (max-width: $tablet)
+      margin-right: 20px
+
+    &--img
+      height: 100%
+
+  &__left
+    display: flex
+    align-items: center
+  &__right
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    color: $white
+    max-width: 400px
+  &__support
+    font: 2rem $pm
+    margin-right: 25px
+    color: inherit
+
+    @media (max-width: $tablet)
+      display: none
+
+  &__login
+    width: 150px !important
+    font-size: 2rem !important
+    background: #ffffff !important
+    border-color: #ffffff !important
+    @media (max-width: $tablet)
+      width: 80px !important
+      font-size: 1.6rem !important
+  &__lang
+    font: 1.6rem $pr
+    position: relative
+    padding-right: 20px
+    cursor: pointer
+    margin-right: 15px
+    &::after
+      content: ''
+      display: block
+      width: 12px
+      position: absolute
+      top: 0
+      bottom: 0
+      right: 0
+      background: url('~assets/images/icons/arrow-bottom.svg') center center no-repeat
+      background-size: contain
+  &__nav
+    margin-right: 40px
+    @media (max-width: $tablet)
+      display: none
